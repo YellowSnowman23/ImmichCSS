@@ -116,6 +116,10 @@ npm run previews
 
 This regenerates the installable CSS and desktop/mobile/overview PNGs. The browser renderer verifies that each stylesheet loads and that the preview has no horizontal overflow at the checked sizes. [Contributing guide](CONTRIBUTING.md)
 
+## AI use disclosure
+
+**GPT-6 Astra** was used to help create this project, including its theme CSS, documentation, preview assets, and validation scripts. See the [compatibility notes](docs/compatibility.md) for the scope and limitations of the testing performed.
+
 ## License and credits
 
 Code, theme palettes, and original sample illustrations are released under the [MIT License](LICENSE). Immich, Claude, Anthropic, OpenAI, and GPT names belong to their respective owners. This independent community project is not affiliated with or endorsed by them. No company logos or proprietary fonts are bundled.
