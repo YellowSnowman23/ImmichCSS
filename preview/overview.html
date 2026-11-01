@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Immich Themes · Collection overview</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:48px;background:#0d1014;color:#ecf0f3;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.collection{display:grid;grid-template-columns:1fr 1fr;gap:26px}.intro{padding:22px 16px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{font-size:11px;letter-spacing:3px;color:#99aaab;font-weight:600}h1{font-weight:550;font-size:66px;letter-spacing:-3px;line-height:1.05;margin:24px 0 18px;max-width:600px}.intro p{max-width:460px;font-size:16px;color:#9eabb9;line-height:1.6;margin:0}.accent{color:#7ad8c1}.intro small{font-size:11px;color:#7d8997;margin-top:30px}.card{display:block;border:1px solid #ffffff13;border-radius:12px;background:var(--panel);overflow:hidden;text-decoration:none;color:var(--text)}.card img{display:block;width:100%;height:auto;aspect-ratio:1.44;object-fit:cover}.card-footer{display:flex;align-items:center;justify-content:space-between;padding:18px 21px;border-top:1px solid #ffffff12}.card h2{font-size:17px;font-weight:600;letter-spacing:-.3px;margin:0}.card span{font-size:10px;color:var(--muted)}.swatches{display:flex;gap:6px}.swatches i{display:block;width:15px;height:15px;border:1px solid #ffffff20;border-radius:50%;background:var(--swatch)}footer{font-size:11px;color:#8a97a7;display:flex;justify-content:space-between;margin-top:29px}@media(max-width:700px){body{padding:20px}.collection{grid-template-columns:1fr;gap:20px}h1{font-size:48px}.intro{padding:20px 0 30px}footer{display:grid;gap:8px}}
+  </style>
+</head>
+<body>
+  <main class="collection"><section class="intro"><span class="eyebrow">A DIFFERENT SHADE OF PERSONAL</span><h1>Your memories.<br><span class="accent">Your atmosphere.</span></h1><p>Seven considered dark themes for Immich.<br>A fresh palette for the photos that matter.</p><small>Open source · Self hosted · Make it yours</small></section></main>
+  <footer><span>Illustrative previews · not live Immich screenshots · original sample artwork</span><span>Claude Theme & GPT Theme are unofficial community themes.</span></footer>
+  <script type="module">
+    const response = await fetch('../src/palettes.json');
+    const themes = await response.json();
+    const collection = document.querySelector('.collection');
+    for (const theme of themes) {
+      const card = document.createElement('a');
+      card.className = 'card'; card.href = `./?theme=${theme.slug}`;
+      for (const key of ['panel','text','muted']) card.style.setProperty(`--${key}`,theme[key]);
+      const img = document.createElement('img'); img.src = `../docs/images/${theme.slug}.png`; img.alt = `${theme.name} illustrative desktop preview`;
+      const bottom = document.createElement('div'); bottom.className = 'card-footer';
+      const title = document.createElement('h2'); title.textContent = theme.name;
+      const swatches = document.createElement('div'); swatches.className = 'swatches';
+      for (const color of [theme.canvas,theme.panel,theme.border,theme.primary[5],theme.text]) { const swatch=document.createElement('i'); swatch.style.setProperty('--swatch',color);swatches.append(swatch); }
+      bottom.append(title,swatches);card.append(img,bottom);collection.append(card);
+    }
+    document.documentElement.dataset.ready='true';
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/*
+ * CLAUDE THEME | ImmichCSS 1.0.0 | MIT License
+ * Claude-inspired terracotta, warm charcoal, and soft ivory. Unofficial.
+ * Source: https://github.com/YellowSnowman23/ImmichCSS
+ * Target: Immich web 3.3.5. Choose Dark appearance before installing.
+ * Paste into Administration > Settings > Theme Settings > Custom CSS.
+ * Install ONE theme at a time. Remove it to restore Immich's default colors.
+ * Generated from src/palettes.json; edit the source and run npm run build.
+ */
+
+:root.dark,
+.dark {
+  /* Native UI tokens: full CSS colors. */
+  --immich-ui-light: #191817;
+  --immich-ui-dark: #faf9f5;
+  --immich-ui-gray: #292724;
+  --immich-ui-muted: #c2bcb1;
+  --immich-ui-default-border: #48433c;
+
+  /* Immich reverses primary and light ramps in dark appearance. */
+  --immich-ui-primary-50: #2c211d;
+  --immich-ui-primary-100: #3b2922;
+  --immich-ui-primary-200: #563b30;
+  --immich-ui-primary-300: #79513f;
+  --immich-ui-primary-400: #d97757;
+  --immich-ui-primary-500: #e18c6d;
+  --immich-ui-primary-600: #e9a080;
+  --immich-ui-primary-700: #f0bda6;
+  --immich-ui-primary-800: #f7d7c8;
+  --immich-ui-primary-900: #fbeae1;
+  --immich-ui-primary-950: #fff6f0;
+
+  --immich-ui-light-50: #211f1d;
+  --immich-ui-light-100: #292724;
+  --immich-ui-light-200: #48433c;
+  --immich-ui-light-300: #625b51;
+  --immich-ui-light-400: #82796c;
+  --immich-ui-light-500: #a29a8c;
+  --immich-ui-light-600: #c2bcb1;
+  --immich-ui-light-700: #d7d1c7;
+  --immich-ui-light-800: #e8e3da;
+  --immich-ui-light-900: #f3f0e9;
+  --immich-ui-light-950: #faf9f5;
+
+  --immich-ui-dark-50: #faf9f5;
+  --immich-ui-dark-100: #f3f0e9;
+  --immich-ui-dark-200: #e8e3da;
+  --immich-ui-dark-300: #d7d1c7;
+  --immich-ui-dark-400: #c2bcb1;
+  --immich-ui-dark-500: #a29a8c;
+  --immich-ui-dark-600: #82796c;
+  --immich-ui-dark-700: #625b51;
+  --immich-ui-dark-800: #48433c;
+  --immich-ui-dark-900: #292724;
+  --immich-ui-dark-950: #211f1d;
+
+  /* Neutral utilities used by legacy fields and labels. */
+  --color-gray-50: #faf9f5;
+  --color-gray-100: #f3f0e9;
+  --color-gray-200: #e8e3da;
+  --color-gray-300: #d7d1c7;
+  --color-gray-400: #c2bcb1;
+  --color-gray-500: #a29a8c;
+  --color-gray-600: #82796c;
+  --color-gray-700: #625b51;
+  --color-gray-800: #292724;
+  --color-gray-900: #211f1d;
+  --color-gray-950: #191817;
+
+  /* Legacy web tokens MUST remain space-separated RGB channels. */
+  --immich-dark-primary: 225 140 109;
+  --immich-dark-bg: 25 24 23;
+  --immich-dark-fg: 250 249 245;
+  --immich-dark-gray: 41 39 36;
+}
+
+:root.dark {
+  color-scheme: dark;
+  background-color: var(--immich-ui-light);
+  scrollbar-color: var(--immich-ui-light-300) var(--immich-ui-light);
+}
+
+:root.dark body:not(.asset-viewer-open) {
+  background-color: var(--immich-ui-light);
+}
+
+/* Retain native validation states; add an unmistakable keyboard focus ring. */
+:root.dark :where(a[href], button, [role="button"]):focus-visible {
+  outline: 2px solid var(--immich-ui-primary-500);
+  outline-offset: 3px;
+}
+
+:root.dark ::selection {
+  background-color: var(--immich-ui-primary-500);
+  color: var(--immich-ui-light);
+}
+
+:root.dark :where(.immich-scrollbar, [role="dialog"]) {
+  scrollbar-color: var(--immich-ui-light-300) var(--immich-ui-light-50);
+}

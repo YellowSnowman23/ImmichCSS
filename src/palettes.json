@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "obsidian-mint",
+    "name": "Obsidian Mint",
+    "description": "Cool charcoal with a fresh, understated mint accent.",
+    "canvas": "#101418",
+    "panel": "#1b222a",
+    "text": "#e6edf3",
+    "muted": "#a7b5c3",
+    "border": "#303d49",
+    "primary": ["#122321", "#18312c", "#24483f", "#346659", "#4f9e89", "#7ad8c1", "#95e2cf", "#b1ebdc", "#ccf3e9", "#e1f8f1", "#f1fcf8"],
+    "neutral": ["#151b22", "#1b222a", "#303d49", "#435362", "#6b7b8e", "#8798a9", "#a7b5c3", "#c2ced9", "#d8e2ec", "#e8eff5", "#f4f8fb"]
+  },
+  {
+    "slug": "midnight-blue",
+    "name": "Midnight Blue",
+    "description": "Deep navy surfaces and luminous glacier blue.",
+    "canvas": "#0c1222",
+    "panel": "#17243b",
+    "text": "#e5edfa",
+    "muted": "#acbbd3",
+    "border": "#304460",
+    "primary": ["#111f36", "#192f4d", "#254669", "#36638f", "#548fbc", "#8fc7fa", "#acd8ff", "#c3e3ff", "#d8edff", "#e9f5ff", "#f5faff"],
+    "neutral": ["#111b30", "#17243b", "#304460", "#455c7c", "#647d9e", "#859ab7", "#acbbd3", "#c2cfe3", "#d8e2f1", "#e9eff9", "#f5f8fe"]
+  },
+  {
+    "slug": "amethyst-dusk",
+    "name": "Amethyst Dusk",
+    "description": "Smoky plum, soft lavender, and a little evening atmosphere.",
+    "canvas": "#191321",
+    "panel": "#291f35",
+    "text": "#f1e9f7",
+    "muted": "#c0aecf",
+    "border": "#493855",
+    "primary": ["#261b34", "#352447", "#4d3566", "#6a4b87", "#9976b8", "#c7a0ed", "#d7b9f5", "#e4cef9", "#eddefb", "#f5ebfd", "#fbf6ff"],
+    "neutral": ["#21192b", "#291f35", "#493855", "#604b70", "#816b92", "#a18bb1", "#c0aecf", "#d4c6df", "#e5dbed", "#f3ecf8", "#fbf7fd"]
+  },
+  {
+    "slug": "ember-glow",
+    "name": "Ember Glow",
+    "description": "Warm espresso and amber, like the last light of a good day.",
+    "canvas": "#1b1511",
+    "panel": "#2d231c",
+    "text": "#f4ece2",
+    "muted": "#c5b29f",
+    "border": "#504033",
+    "primary": ["#2b2015", "#3b2b19", "#583d21", "#78552e", "#ac7f44", "#edbb7a", "#f5cd99", "#f8ddba", "#fbe9d3", "#fdf2e5", "#fff9f2"],
+    "neutral": ["#241c16", "#2d231c", "#504033", "#6c5745", "#8d7660", "#ab947e", "#c5b29f", "#d9c9b8", "#e9ddce", "#f6eee4", "#fdf9f2"]
+  },
+  {
+    "slug": "graphite",
+    "name": "Graphite",
+    "description": "Neutral near-black and silver. Give every color to your photos.",
+    "canvas": "#111111",
+    "panel": "#202020",
+    "text": "#eeeeee",
+    "muted": "#b5b5b5",
+    "border": "#3b3b3b",
+    "primary": ["#1c1c1c", "#2b2b2b", "#414141", "#5b5b5b", "#939393", "#d0d0d0", "#dedede", "#e8e8e8", "#f0f0f0", "#f7f7f7", "#fdfdfd"],
+    "neutral": ["#191919", "#202020", "#3b3b3b", "#535353", "#737373", "#939393", "#b5b5b5", "#cbcbcb", "#dddddd", "#eeeeee", "#f9f9f9"]
+  },
+  {
+    "slug": "claude-theme",
+    "name": "Claude Theme",
+    "description": "Claude-inspired terracotta, warm charcoal, and soft ivory. Unofficial.",
+    "canvas": "#191817",
+    "panel": "#292724",
+    "text": "#faf9f5",
+    "muted": "#c2bcb1",
+    "border": "#48433c",
+    "primary": ["#2c211d", "#3b2922", "#563b30", "#79513f", "#d97757", "#e18c6d", "#e9a080", "#f0bda6", "#f7d7c8", "#fbeae1", "#fff6f0"],
+    "neutral": ["#211f1d", "#292724", "#48433c", "#625b51", "#82796c", "#a29a8c", "#c2bcb1", "#d7d1c7", "#e8e3da", "#f3f0e9", "#faf9f5"]
+  },
+  {
+    "slug": "gpt-theme",
+    "name": "GPT Theme",
+    "description": "OpenAI-inspired charcoal, cool gray, and crisp white. Unofficial.",
+    "canvas": "#18191b",
+    "panel": "#282a2d",
+    "text": "#ffffff",
+    "muted": "#b8bdc4",
+    "border": "#43474d",
+    "primary": ["#23262a", "#30353b", "#454d56", "#616d7a", "#9aa7b5", "#e8edf2", "#eef2f6", "#f3f6f8", "#f7f9fb", "#fbfcfd", "#ffffff"],
+    "neutral": ["#202225", "#282a2d", "#43474d", "#5b626b", "#7b8590", "#9aa4af", "#b8bdc4", "#c9d1d9", "#dde2e7", "#eef1f4", "#ffffff"]
+  }
+]

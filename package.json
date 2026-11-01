@@ -1,0 +1,21 @@
+{
+  "name": "immich-css-themes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Seven carefully tuned dark themes for Immich, with reproducible image previews.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build-themes.mjs",
+    "build:check": "node scripts/build-themes.mjs --check",
+    "test": "node --test tests/*.test.mjs",
+    "previews": "node scripts/render-previews.mjs",
+    "preview": "node scripts/serve-preview.mjs",
+    "check": "npm run build:check && npm test"
+  },
+  "devDependencies": {
+    "playwright": "1.64.1",
+    "postcss": "8.5.32"
+  }
+}

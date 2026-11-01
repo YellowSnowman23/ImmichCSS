@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Obsidian Mint · Immich Themes</title>
+  <link rel="stylesheet" href="../themes/obsidian-mint.css" id="theme-stylesheet">
+  <link rel="stylesheet" href="preview.css">
+  <script src="preview.js" defer></script>
+</head>
+<body>
+  <header class="showcase-header">
+    <a class="collection-brand" href="./"><span class="collection-mark" aria-hidden="true">◈</span><span>IMMICH <strong>THEMES</strong><small>SEVEN WAYS TO MAKE IT YOURS</small></span></a>
+    <div class="theme-tools"><label class="sr-only" for="theme-picker">Preview theme</label><select id="theme-picker" aria-label="Preview theme"><option value="obsidian-mint">Obsidian Mint</option><option value="midnight-blue">Midnight Blue</option><option value="amethyst-dusk">Amethyst Dusk</option><option value="ember-glow">Ember Glow</option><option value="graphite">Graphite</option></select><a id="download-theme" class="download-button" href="../themes/obsidian-mint.css" download>Download CSS <span aria-hidden="true">↓</span></a></div>
+  </header>
+
+  <main class="app-frame" aria-label="Illustrative Immich interface preview">
+    <aside class="sidebar">
+      <div class="app-logo"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l6 8-6 5-6-5Z" fill="currentColor" opacity=".8"/><path d="M29 16l-8 6-5-6 5-6Z" fill="currentColor" opacity=".55"/><path d="M16 29l-6-8 6-5 6 5Z" fill="currentColor" opacity=".85"/><path d="M3 16l8-6 5 6-5 6Z" fill="currentColor" opacity=".4"/></svg><span>immich</span></div>
+      <nav aria-label="Illustrative navigation">
+        <span class="nav-item active" aria-current="page"><svg><use href="#icon-photo"/></svg>Photos</span>
+        <span class="nav-item"><svg><use href="#icon-search"/></svg>Explore</span>
+        <span class="nav-item"><svg><use href="#icon-globe"/></svg>Map</span>
+        <span class="nav-item"><svg><use href="#icon-share"/></svg>Sharing</span>
+        <span class="nav-heading">LIBRARY</span>
+        <span class="nav-item"><svg><use href="#icon-album"/></svg>Albums<span class="nav-count">12</span></span>
+        <span class="nav-item"><svg><use href="#icon-heart"/></svg>Favorites</span>
+        <span class="nav-item"><svg><use href="#icon-box"/></svg>Archive</span>
+        <span class="nav-item"><svg><use href="#icon-trash"/></svg>Trash</span>
+      </nav>
+      <div class="sidebar-bottom"><span class="storage-title"><svg><use href="#icon-cloud"/></svg>Storage</span><div class="storage-track"><span></span></div><span class="storage-copy">38.2 GB of 100 GB used</span><span class="demo-label">SAMPLE LIBRARY</span></div>
+    </aside>
+    <section class="workspace">
+      <div class="app-topbar"><div class="search-field" aria-label="Example search field"><svg><use href="#icon-search"/></svg><span>Search your memories</span><kbd>/</kbd></div><div class="topbar-right"><span class="sync-state"><span></span>All backed up</span><span class="avatar" aria-label="Sample user avatar">J</span></div></div>
+      <div class="gallery-content" id="gallery">
+        <div class="page-heading"><div><div class="eyebrow">YOUR MOMENTS, YOUR COLORS</div><h1>Life, in good light.</h1><p>A little room for your favorite memories.</p></div><span class="photo-count"><svg><use href="#icon-photo"/></svg>248 photos</span></div>
+        <div class="gallery-section-heading"><h2>October 2026</h2><span>Somewhere worth remembering</span></div>
+        <div class="photo-grid">
+          <figure class="photo photo-wide"><img src="art/alpine-morning.svg" alt="Original illustration of pale alpine peaks in morning light"><figcaption><span>Alpine morning</span><svg><use href="#icon-heart"/></svg></figcaption></figure>
+          <figure class="photo"><img src="art/desert-light.svg" alt="Original illustration of rolling warm desert dunes"><figcaption><span>Desert light</span></figcaption></figure>
+          <figure class="photo"><img src="art/quiet-pines.svg" alt="Original illustration of a deep green pine forest"><figcaption><span>Quiet pines</span></figcaption></figure>
+          <figure class="photo"><img src="art/blue-hour.svg" alt="Original illustration of layered blue mountains at dusk"><figcaption><span>Blue hour</span></figcaption></figure>
+          <figure class="photo"><img src="art/pacific-edge.svg" alt="Original illustration of a turquoise sea between coastal cliffs"><figcaption><span>Pacific edge</span><svg><use href="#icon-heart"/></svg></figcaption></figure>
+          <figure class="photo photo-wide"><img src="art/golden-valley.svg" alt="Original illustration of a mountain valley in golden light"><figcaption><span>Golden valley</span></figcaption></figure>
+        </div>
+        <div class="gallery-section-heading second-heading"><h2>September 2026</h2><span>A slower kind of weekend</span></div>
+        <div class="photo-grid second-grid">
+          <figure class="photo"><img src="art/highland-mist.svg" alt="Original illustration of misty green highlands"><figcaption><span>Highland mist</span></figcaption></figure>
+          <figure class="photo"><img src="art/copper-ridge.svg" alt="Original illustration of copper colored sand ridges"><figcaption><span>Copper ridge</span></figcaption></figure>
+          <figure class="photo"><img src="art/silver-lake.svg" alt="Original illustration of a still mountain lake"><figcaption><span>Silver lake</span></figcaption></figure>
+          <figure class="photo"><img src="art/last-light.svg" alt="Original illustration of violet trees in the last light of sunset"><figcaption><span>Last light</span></figcaption></figure>
+        </div>
+        <section class="theme-card" aria-label="Theme palette"><div class="theme-description"><span class="eyebrow">THE CURRENT PALETTE</span><h2 id="theme-name">Obsidian Mint</h2><p id="theme-description">Deep charcoal. A fresh mint accent. A quieter place for your photos.</p></div><div class="palette" aria-label="Theme color swatches"><span class="swatch" style="--swatch:var(--immich-ui-light)" title="Canvas"></span><span class="swatch" style="--swatch:var(--immich-ui-gray)" title="Surface"></span><span class="swatch" style="--swatch:var(--immich-ui-default-border)" title="Border"></span><span class="swatch" style="--swatch:var(--immich-ui-muted)" title="Muted text"></span><span class="swatch" style="--swatch:var(--immich-ui-primary-500)" title="Accent"></span><span class="swatch" style="--swatch:var(--immich-ui-dark)" title="Text"></span></div><span class="theme-status"><span></span>Dark theme</span></section>
+      </div>
+    </section>
+  </main>
+  <footer class="showcase-footer"><span>Illustrative preview · not a live Immich screenshot</span><span>Original landscape artwork · MIT licensed</span></footer>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="icon-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m4 18 5-5 4 3 3-6 5 8"/></symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></symbol>
+    <symbol id="icon-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.5 10.5 7-4m-7 7 7 4"/></symbol>
+    <symbol id="icon-album" viewBox="0 0 24 24"><rect x="5" y="3" width="16" height="16" rx="3"/><path d="M2 7v12a3 3 0 0 0 3 3h12m-7-9 3-3 4 4"/></symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 0 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/></symbol>
+    <symbol id="icon-box" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="5" rx="1"/><path d="M5 8v12h14V8m-10 4h6"/></symbol>
+    <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></symbol>
+    <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M6.5 19a5.5 5.5 0 0 1-.9-10.9A7 7 0 0 1 19 8.5a5.3 5.3 0 0 1-.8 10.5Z"/></symbol>
+  </defs></svg>
+</body>
+</html>

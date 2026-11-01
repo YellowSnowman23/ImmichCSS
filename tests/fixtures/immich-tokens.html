@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Immich token compatibility fixture</title>
+<!--
+  Independently authored regression fixture, not a running Immich server.
+  Layout and sample content are synthetic. Default colors are simplified.
+  Token relationships were checked against Immich v3.3.5:
+  https://github.com/immich-app/immich/blob/v3.3.5/web/src/app.css
+  and its pinned @immich/ui 0.90.0 npm package:
+  https://www.npmjs.com/package/@immich/ui/v/0.90.0
+    dist/theme/default.css: .dark, .light, native full-color token mapping
+    dist/styles.js: filledColor, filledColorHover, inputContainerCommon
+    dist/internal/Button.svelte: primary outline and focus-visible behavior
+    dist/components/Modal/Modal.svelte: bg-light dark:bg-subtle
+  Legacy image hidden-state behavior comes from:
+  web/src/lib/components/assets/thumbnail/ImageThumbnail.svelte
+  Tests do not claim full application, mobile app or browser compatibility.
+-->
+<style>
+  @layer base {
+    :root, .light {
+      --immich-ui-light: #ffffff;
+      --immich-ui-dark: #404040;
+      --immich-ui-gray: #f5f5f5;
+      --immich-ui-muted: #707070;
+      --immich-ui-primary-500: #4250af;
+      --immich-ui-light-100: #f5f5f5;
+      --immich-ui-light-300: #d4d4d4;
+      --immich-ui-light-800: #262626;
+      --immich-ui-default-border: #d4d4d4;
+      --immich-ui-danger-500: #e03535;
+      --immich-ui-warning-100: #fff1ce;
+      --immich-ui-danger-100: #ffe0e0;
+      --color-gray-100: #f3f4f6;
+      --color-gray-300: #d1d5db;
+      --color-gray-500: #6b7280;
+      --color-gray-800: #1f2937;
+      --immich-dark-primary: 172 203 250;
+      --immich-dark-bg: 10 10 10;
+      --immich-dark-fg: 229 231 235;
+      --immich-dark-gray: 33 33 33;
+    }
+    .dark {
+      --immich-ui-light: #000000;
+      --immich-ui-dark: #e5e5e5;
+      --immich-ui-gray: #18181b;
+      --immich-ui-muted: #d4d4d4;
+      --immich-ui-primary-500: #accbfa;
+      --immich-ui-light-100: #171717;
+      --immich-ui-light-300: #404040;
+      --immich-ui-light-800: #e5e5e5;
+      --immich-ui-default-border: #262626;
+      --immich-ui-danger-500: #f28888;
+      --immich-ui-warning-100: #352208;
+      --immich-ui-danger-100: #381010;
+    }
+  }
+  @layer utilities {
+    body { margin: 0; font: 16px/1.4 sans-serif; color: var(--immich-ui-dark); background: var(--immich-ui-light); }
+    body.asset-viewer-open { background-color: black; }
+    button, input { font: inherit; }
+    .bg-subtle { background-color: var(--immich-ui-gray); }
+    .text-muted { color: var(--immich-ui-muted); }
+    .text-primary { color: var(--immich-ui-primary-500); }
+    .bg-primary { background-color: var(--immich-ui-primary-500); }
+    .text-light { color: var(--immich-ui-light); }
+    .bg-light { background-color: var(--immich-ui-light); }
+    .dark .dark\:bg-subtle { background-color: var(--immich-ui-gray); }
+    .filled:hover { background-color: color-mix(in srgb, var(--immich-ui-primary-500) 80%, transparent); }
+    .filled { border: 0; padding: 8px 20px; border-radius: 12px; outline-color: var(--immich-ui-primary-500); }
+    .filled:focus-visible { outline-width: 2px; outline-style: solid; outline-offset: 2px; }
+    .immich-form-label { color: var(--color-gray-500); }
+    .immich-form-input { background: var(--color-gray-100); color: inherit; border: 1px solid var(--immich-ui-default-border); border-radius: 8px; padding: 10px 16px; }
+    .dark .immich-form-label { color: var(--color-gray-300); }
+    .dark .immich-form-input { background: var(--color-gray-800); }
+    .immich-form-input:focus { outline: 1px solid var(--immich-ui-primary-500); }
+    .immich-form-input[aria-invalid="true"] { outline: 1px solid var(--immich-ui-danger-500); }
+    .legacy { color: rgb(var(--immich-dark-fg)); background: rgb(var(--immich-dark-gray)); border-color: rgb(var(--immich-dark-primary)); }
+    .warning { background: var(--immich-ui-warning-100); }
+    .danger { background: var(--immich-ui-danger-100); }
+    .hidden-asset { filter: grayscale(.5); opacity: .5; }
+    .tooltip { color: var(--immich-ui-light); background: var(--immich-ui-light-800); }
+  }
+  main { padding: 24px; max-width: 640px; }
+  section { margin-block: 16px; padding: 16px; }
+  p { margin-block: 8px; }
+  img, video { display: inline-block; width: 96px; height: 64px; object-fit: cover; }
+  [role="dialog"] { width: 320px; padding: 20px; border: 1px solid var(--immich-ui-default-border); }
+</style>
+<body>
+<main>
+  <p id="bodyText">Photo library</p>
+  <p id="muted" class="text-muted">Sample library metadata</p>
+  <a id="primary" class="text-primary" href="#library">Albums</a>
+  <section id="panel" class="bg-subtle">
+    <button id="button" class="filled bg-primary text-light">Upload</button>
+    <p><label id="label" class="immich-form-label" for="field">Album name</label></p>
+    <input id="field" class="immich-form-input" value="Mountains">
+    <input id="invalidField" class="immich-form-input" aria-invalid="true" value="Invalid sample">
+  </section>
+  <section id="legacy" class="legacy">Legacy token consumer</section>
+  <section id="warning" class="warning">Native warning background</section>
+  <section id="danger" class="danger">Native danger background</section>
+  <p id="tooltip" class="tooltip">Photo details</p>
+  <img id="photo" alt="Synthetic color swatch" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='64'%3E%3Cpath fill='%23e85d75' d='M0 0h48v64H0z'/%3E%3Cpath fill='%233a86ff' d='M48 0h48v64H48z'/%3E%3C/svg%3E">
+  <img id="hiddenPhoto" class="hidden-asset" alt="Hidden synthetic color swatch" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='64'%3E%3Cpath fill='%23e85d75' d='M0 0h96v64H0z'/%3E%3C/svg%3E">
+  <video id="video" aria-label="Video style sample"></video>
+  <div id="dialog" role="dialog" aria-label="Sample album dialog" class="bg-light dark:bg-subtle" hidden>
+    <p>Album details</p>
+    <button class="filled bg-primary text-light">Save</button>
+  </div>
+</main>
+</body>
+</html>
